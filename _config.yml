@@ -26,8 +26,8 @@ compress_html:
 links:
   - title: Home
     url: /
-  - title: Products
-    url: /cursos
+  - title: Projects
+    url: /projects
   - title: Series
     url: /series
   - title: Tags
