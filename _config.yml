@@ -26,13 +26,13 @@ compress_html:
 links:
   - title: Home
     url: /
-  - title: Cursos
+  - title: Products
     url: /cursos
-  - title: Séries
+  - title: Series
     url: /series
   - title: Tags
     url: /tags
-  - title: Sobre mim
+  - title: About
     url: /about
 
 collections:
