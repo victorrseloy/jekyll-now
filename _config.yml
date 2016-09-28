@@ -1,8 +1,7 @@
 # Site settings
 title: victorrseloy
 email: victorreloy@hotmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  some cool description
+description: A cool blog about front-end development
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://victorrseloy.github.io" # the base hostname & protocol for your site
 twitter_username: victorrseloy
@@ -26,17 +25,17 @@ compress_html:
 links:
   - title: Home
     url: /
-  - title: Projects
-    url: /projects
-  - title: Series
-    url: /series
+#  - title: Projects
+#    url: /projects
+#  - title: Series
+#    url: /series
   - title: Tags
     url: /tags
-  - title: About
-    url: /about
+#  - title: About
+#    url: /about
 
 collections:
-  - cursos
+#  - cursos
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules', 'vendor/bundle/ruby']

@@ -22,11 +22,11 @@ If you are a front-end developer probably the first time you've heard the word
 
 ![what is hoisting?](/assets/img/wat_hoisting.jpg)
 
-Actually hoisting is a fancy word to a simple concept, that if not properly undesrstood can lead
+Actually hoisting is a fancy word to a simple concept, which if not properly understood can lead
 you to hours of code blaming. Hoisting basically is the act of the javascript interpreter
-moving  declarations(both variables and functions) to the top of the current functions.
+moving  declarations(both variables and functions) to the top of the current function.
 
-## OK Lets Actually Understand How It Works
+## OK Let's Understand How It Works
 
 In javascript when we are dealing with variables normally we do this 3 things:
 
@@ -63,12 +63,12 @@ function foo(){
 
 {% endhighlight%}
 
-this is such a natural thing that we never really stop to think about what really happens
+this is such a natural thing that we never stop to think about what really happens
 under the hood, so lets do it now.
 
 the javascript engine does multiple passes on the source code before actually running it,
-so one of the very first things that the engine will do is to go through all you code
-searching for variable and functions declarations, once it find these declarations it will move them
+so one of the very first things that the engine will do is to go through all your code
+searching for variable and functions declarations, once it finds these declarations it will move them
 to the top of the current scope.
 
 let's see this example:
@@ -111,9 +111,9 @@ age = "5";
 
 ## Pratical Hoisting Implications
 
-the first implication of hoisting is that you can use a variable or function before
-actually declaring it, this fact that the javascript engine will move our declarations
-to the top of our scope is why code like this one actually works.
+The first implication of hoisting is that you can use a variable or function before
+actually declaring it, this comes from the fact that  javascript engine will move our declarations
+to the top of our scope. This is why code like this one works.
 
 {% highlight js %}
 
@@ -128,7 +128,7 @@ function myAmazingFunction(){
 {% endhighlight %}
 
 
-Other intersting behavior that comes from hoisting is this common gotchat
+Other interesting behavior that comes from hoisting is this common gotcha
 
 {% highlight js %}
 
@@ -149,8 +149,8 @@ bar();
 {% endhighlight %}
 
 
-some beginner programmers may may wonder way this *console.log(foo);* will print undefined,
-if you don't know how hoisting works this behavior may look weird, but actually this happens
+some beginner programmers may wonder the reason why this *console.log(foo);* will print undefined.
+If you don't know how hoisting works this behavior may look weird, but actually undefined will be printed
 because under the hood the real executed code looks like this;
 
 {% highlight js %}
@@ -177,8 +177,8 @@ bar();
 
 ## function declaration x function expression
 
-One important thing to note is that **hoisting will move only declarations** so for example
-if you have some function expression and try to invoke it before the asignment, you will get
+One important thing to note is that **hoisting will move only declarations**. So for example
+if you have a function expression and try to invoke it before its assignment, you will get
 an error
 
 {% highlight js %}
@@ -192,11 +192,10 @@ var myAmazingFunction = function(){
 {% endhighlight %}
 
 Remember this happens because even if we have the declaration of myAmazingFunction being moved to the top,
-the Initialization of it will happen only after we tried to invoke it, because this is not a function  definition.
-this is a function expression.
+the Initialization of it will happen only after we tried to invoke it, this happens because we are not dealing with  a function  definition, we are dealing with a function expression instead.
 
 ## Final Thoughts
 
 For completeness sake, I need to mention that behind the scenes things are actually implemented a little bit different. The ECMAScript standard does not define hoisting as “the declaration gets moved to the top of the function”. Handling code happens in two steps: the first one is parsing and entering the context and the second one is runtime code execution. In the first step variables, function declarations and formal parameters are created. In the second stage function expressions and unqualified identifiers (undeclared variables) are created. However for practical purposes we can adopt the concept of hoisting.
 
-I hope you enjoyed the reading, my focus on this post was to try to desmistify some of strange behavior you sometimes may experience.
+I hope you enjoyed the reading, my focus on this post was to demystify some of the strange behaviors you sometimes may experience when dealing with hoisting. Hope you enjoyed the reading. See you in the next post.
