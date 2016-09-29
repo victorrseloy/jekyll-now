@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What Is The Javascript Hoisting"
+title: "What Is Javascript Hoisting"
 date: 2016-09-18 11:41:40
 image: '/assets/img/wat_hoisting.jpg'
 description: "Have you ever wondered what this fancy word means, or why sometimes your variables behave in an unexpected way. Today I will explain."
