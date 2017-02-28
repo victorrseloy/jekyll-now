@@ -3,15 +3,15 @@ layout: post
 title: "What Is Javascript Hoisting"
 date: 2016-09-18 11:41:40
 image: '/assets/img/wat_hoisting.jpg'
-description: "Have you ever wondered what this fancy word means, or why sometimes your variables behave in an unexpected way. Today I will explain."
+description: "Have you ever wondered what this fancy word means? Or why sometimes your variables behave in an unexpected way? Today I will explain."
 main-class: 'dev'
 color: '#637a91'
 tags:
 - javascript
 - fundations
 categories:
-twitter_text: "Have you ever wondered what this fancy word means, or why sometimes your variables behave in an unexpected way. Today I will explain."
-introduction: "Have you ever wondered what this fancy word means, or why sometimes your variables behave in an unexpected way. Today I will explain."
+twitter_text: "Have you ever wondered what this fancy word means? Or why sometimes your variables behave in an unexpected way? Today I will explain."
+introduction: "Have you ever wondered what this fancy word means? Or why sometimes your variables behave in an unexpected way? Today I will explain."
 ---
 
 ## 9 Thousand feet view about hoisting
@@ -22,8 +22,8 @@ If you are a front-end developer probably the first time you've heard the word
 
 ![what is hoisting?](/assets/img/wat_hoisting.jpg)
 
-Actually hoisting is a fancy word to a simple concept, which if not properly understood can lead
-you to hours of code blaming. Hoisting basically is the act of the javascript interpreter
+Hoisting is a fancy word to a simple concept (that if not properly understood can lead
+you to hours of code blaming). Hoisting basically is the act of the javascript interpreter
 moving  declarations(both variables and functions) to the top of the current function.
 
 ## OK Let's Understand How It Works
@@ -64,11 +64,11 @@ function foo(){
 {% endhighlight%}
 
 this is such a natural thing that we never stop to think about what really happens
-under the hood, so lets do it now.
+under the hood. So lets do it now.
 
-the javascript engine does multiple passes on the source code before actually running it,
-so one of the very first things that the engine will do is to go through all your code
-searching for variable and functions declarations, once it finds these declarations it will move them
+The javascript engine does multiple passes on the source code before actually running it,
+one of the very first things that the engine will do is to go through all your code
+searching for variable and functions declarations. Once it finds these declarations it will move them
 to the top of the current scope.
 
 let's see this example:
@@ -87,7 +87,7 @@ function() myAmazingFunction(){
 
 {% endhighlight %}
 
-actually will look like this under the hood after this pass
+under the hood it will look like this after the engine pass
 
 {% highlight js %}
 
@@ -112,8 +112,8 @@ age = "5";
 ## Pratical Hoisting Implications
 
 The first implication of hoisting is that you can use a variable or function before
-actually declaring it, this comes from the fact that  javascript engine will move our declarations
-to the top of our scope. This is why code like this one works.
+actually declaring it, this comes from the fact that javascript engine will move our declarations
+to the top of our scope. This is why code like this do not throw errors.
 
 {% highlight js %}
 
@@ -128,7 +128,7 @@ function myAmazingFunction(){
 {% endhighlight %}
 
 
-Other interesting behavior that comes from hoisting is this common gotcha
+Other interesting hoisting implication is this common gotcha
 
 {% highlight js %}
 
@@ -150,7 +150,7 @@ bar();
 
 
 some beginner programmers may wonder the reason why this *console.log(foo);* will print undefined.
-If you don't know how hoisting works this behavior may look weird, but actually undefined will be printed
+If you don't know how hoisting works this behavior may look weird, but undefined will be printed
 because under the hood the real executed code looks like this;
 
 {% highlight js %}
